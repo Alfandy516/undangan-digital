@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Georgia', serif;
+
+    /* Background wedding */
+    background-image: url("https://images.unsplash.com/photo-1522673607200-164d1b6ce486");
+    background-size: cover;
+    background-position: center;
+}
+
+/* overlay agar teks terlihat jelas */
+body::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+}
+
+/* container */
+.container{
+    position:relative;
+    text-align:center;
+    color:white;
+}
+
+/* judul */
+h1{
+    font-size:40px;
+    margin-bottom:30px;
+    letter-spacing:3px;
+}
+
+/* tombol */
+.btn{
+    padding:15px 40px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#d4af37;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#b8962e;
+    transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Wedding Invitation</h1>
+    <a href="https://ais-pre-a4un57zoyutwctjpl3sfjn-487577388854.asia-southeast1.run.app/track/azJ16MlIHJjInvkyaBxj" class="btn">Buka Undangan</a>
+</div>
+
+</body>
+</html>
