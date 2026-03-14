@@ -3,79 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kena Prank</title>
+<title>Kena Prank 😂</title>
 
 <style>
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f0f0f0;
-    font-family: Arial, sans-serif;
-    text-align: center;
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:#f4f4f4;
+    font-family:Arial, sans-serif;
 }
 
-/* Judul prank */
-h1{
-    margin-top: 30px;
-    font-size: 32px;
-    color: #333;
+/* Emoji */
+.emoji{
+    position:relative;
+    width:170px;
+    height:170px;
+    background:#ffeb3b;
+    border-radius:50%;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    animation:shake 0.25s infinite alternate;
 }
 
-/* Wajah */
-.emoji {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    background: #ffeb3b;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    animation: laugh 0.5s infinite alternate;
+/* Mata */
+.eye{
+    position:absolute;
+    top:45px;
+    width:35px;
+    height:18px;
+    border-bottom:6px solid #000;
+    border-radius:50%;
 }
 
-/* Mata kiri & kanan */
-.eye {
-    position: absolute;
-    top: 40px;
-    width: 20px;
-    height: 20px;
-    background: #000;
-    border-radius: 50%;
-}
-.eye.left { left: 40px; }
-.eye.right { right: 40px; }
+.eye.left{ left:35px; }
+.eye.right{ right:35px; }
 
 /* Mulut */
-.mouth {
-    position: absolute;
-    bottom: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 40px;
-    background: #000;
-    border-bottom-left-radius: 80px 40px;
-    border-bottom-right-radius: 80px 40px;
-    overflow: hidden;
+.mouth{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90px;
+    height:60px;
+    background:#000;
+    border-bottom-left-radius:90px 60px;
+    border-bottom-right-radius:90px 60px;
+    animation:laugh-mouth 0.3s infinite alternate;
+    overflow:hidden;
 }
 
-/* Gigi */
-.teeth {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: #fff;
+/* Lidah */
+.tongue{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:30px;
+    background:#ff5252;
+    border-radius:50%;
 }
 
-/* Animasi tertawa */
-@keyframes laugh {
-    0%   { transform: translateY(0); }
-    100% { transform: translateY(-5px); }
+/* Animasi goyang */
+@keyframes shake{
+    0%{ transform:rotate(-5deg); }
+    100%{ transform:rotate(5deg); }
 }
+
+/* Animasi mulut */
+@keyframes laugh-mouth{
+    0%{ height:50px; }
+    100%{ height:70px; }
+}
+
+/* Tulisan prank */
+.text{
+    margin-top:30px;
+    font-size:34px;
+    font-weight:bold;
+    color:#333;
+    animation:bounce 0.6s infinite;
+}
+
+/* WKWK */
+.laugh{
+    font-size:28px;
+    margin-top:10px;
+    color:#ff5722;
+    animation:flash 0.5s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+}
+
+@keyframes flash{
+    0%{ opacity:1; }
+    50%{ opacity:0.2; }
+    100%{ opacity:1; }
+}
+
 </style>
 </head>
 
@@ -85,11 +116,12 @@ h1{
     <div class="eye left"></div>
     <div class="eye right"></div>
     <div class="mouth">
-        <div class="teeth"></div>
+        <div class="tongue"></div>
     </div>
 </div>
 
-<h1>😂 Selamat! Anda Kena Prank!</h1>
+<div class="text">😂 Selamat! Anda Kena Prank!</div>
+<div class="laugh">WKWKWKWKWK 🤣</div>
 
 </body>
 </html>
